@@ -1,4 +1,4 @@
-    <h1> Vacation Name: <%= @trip.name %> </h1>
+    <h1><i class="fas fa-plane"></i> Vacation Name: <%= @trip.name %> </h1>
 
     <ul> 
     <li> Start Date: <%= @trip.start_date %> </li> 
@@ -6,6 +6,9 @@
     </ul>
     
     <%= link_to 'Add Location', new_trip_location_path(@trip) %>
+    
+    <%= link_to 'Write a review', new_trip_review_path(@trip) %>
+    <%= link_to 'Read reviews', trip_reviews_path(@trip, @review) %>
 
 <hr>
 

@@ -1,0 +1,15 @@
+<h1> Review Title: <%= @review.title %> </h1>
+<hr>
+<p> <%= @review.body %> </p>
+<p> Rating: <%= @review.rating %> </p>
+<p> Posted By: <%= @review.user_name %> </p>
+
+<hr>
+
+<p> Review details </p>
+
+<button class="btn btn-info"> <%= link_to 'Back', root_path %> </button>
+
+<button class="btn btn-warning"> <%= link_to 'Update Review', edit_trip_review_path(@trip, @review) %> </button>
+
+<button class="btn btn-danger">  <%= link_to 'Delete Review',[@trip, @review],  method: :delete %> </button>
