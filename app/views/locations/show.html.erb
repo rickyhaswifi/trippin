@@ -1,2 +1,20 @@
 <h1>Locations#show</h1>
 <p>Find me in app/views/locations/show.html.erb</p>
+
+<h1> Location: <%= @Location.name %> </h1>
+
+<ul> 
+<li> Days<%= @location.days%> </li> 
+</ul>
+
+
+<hr>
+
+
+<p> Choose Location </p>
+
+<button class="btn btn-info"> <%= link_to 'Back', root_path%> </button>
+
+<button class="btn btn-warning"> <%= link_to 'Location Name', edit_location_path(@location) %> </button>
+
+<button class="btn btn-danger">  <%= link_to 'Delete Location', @location,  method: :delete %> </button>
