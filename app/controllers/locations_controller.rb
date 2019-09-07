@@ -18,7 +18,6 @@ class LocationsController < ApplicationController
     if @location.save
       redirect_to trip_location_path(@trip, @location)
     else
-      # binding.pry
       render :new
     end
   end

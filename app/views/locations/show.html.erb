@@ -1,4 +1,4 @@
-    <h1> Vacation Name: <%= @location.name %> </h1>
+    <h1> Location Name: <%= @location.name %> </h1>
 
     <ul> 
     <li> Start Date: <%= @location.days %> </li> 
@@ -7,10 +7,11 @@
 
 <hr>
 
+ <%= link_to 'Add Address', new_location_address_path(@location) %>
 
 <p> Update trip details </p>
 
-<button class="btn btn-info"> <%= link_to 'Back', root_path%> </button>
+<button class="btn btn-info"> <%= link_to 'Back', root_path %> </button>
 
 <button class="btn btn-warning"> <%= link_to 'Update Details', edit_trip_location_path(@trip, @location) %> </button>
 
