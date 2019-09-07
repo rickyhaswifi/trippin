@@ -9,5 +9,8 @@ root 'trips#index'
  resources :locations do
    resources :addresses
  end
-
+ 
+ resources :trips do
+   resources :reviews
+ end
 end
