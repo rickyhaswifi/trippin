@@ -1,2 +1,17 @@
-<h1>Locations#show</h1>
-<p>Find me in app/views/locations/show.html.erb</p>
+    <h1> Vacation Name: <%= @location.name %> </h1>
+
+    <ul> 
+    <li> Start Date: <%= @location.days %> </li> 
+    </ul>
+    
+
+<hr>
+
+
+<p> Update trip details </p>
+
+<button class="btn btn-info"> <%= link_to 'Back', root_path%> </button>
+
+<button class="btn btn-warning"> <%= link_to 'Update Details', edit_trip_location_path(@trip, @location) %> </button>
+
+<button class="btn btn-danger">  <%= link_to 'Delete location',[@trip, @location],  method: :delete %> </button>

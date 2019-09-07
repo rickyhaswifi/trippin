@@ -1,2 +1,18 @@
-<h1>Locations#new</h1>
-<p>Find me in app/views/locations/new.html.erb</p>
+<h1>Vacation planner</h1>
+<h2>Please fill out the trip planner form</h2>
+
+<div class="card card-form mb-3">
+<div class="form-group">
+
+<%= form_for [@trip, @location] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, class: 'form-control' %>
+    <br>
+    <%= f.label :days %>
+    <%= f.text_field :days, required: true, class: 'form-control' %>
+    <br>
+    <%= f.submit %>
+<% end %>
+
+</div>
+</div>
