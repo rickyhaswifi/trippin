@@ -3,7 +3,6 @@ class CreateLocations < ActiveRecord::Migration[6.0]
     create_table :locations do |t|
       t.string :name
       t.integer :days
-      t.integer :trip_id
 
       t.timestamps
     end

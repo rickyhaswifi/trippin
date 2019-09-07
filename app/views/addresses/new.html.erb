@@ -1,2 +1,16 @@
-<h1>Addresses#new</h1>
-<p>Find me in app/views/addresses/new.html.erb</p>
+<h1>Add Address</h1>
+<%= form_for @address do |f| %>
+<%= f.label :street %>
+<%= f.text_field :street, required: true, class: ‘form-control’ %>
+<br>
+<%= f.label :state %>
+<%= f.text_field :state, required: true, class: ‘form-control’ %>
+<br>
+<%= f.label :city %>
+<%= f.text_field :city, required: true, class: ‘form-control’ %>
+<br>
+<%= f.label :zip %>
+<%= f.text_field :zip, required: true, class: ‘form-control’ %>
+<br>
+<%= f.submit %>
+<% end %>

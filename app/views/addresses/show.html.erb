@@ -1,2 +1,19 @@
-<h1>Addresses#show</h1>
-<p>Find me in app/views/addresses/show.html.erb</p>
+<h1> Address : <%= @address.name %> </h1>
+
+    <ul> 
+    <li> Street <%= @address.street  %> </li> 
+    <li> State <%= @address.state  %> </li>  
+    <li> city  <%= @address.city  %> </li>  
+    <li> Zip  <%= @address.zip %> </li>  
+    </ul>
+    
+
+<hr>
+
+<p> Update address details </p>
+
+<button class="btn btn-info"> <%= link_to 'Back', root_path%> </button>
+
+<button class="btn btn-warning"> <%= link_to 'Update Details', edit_address_path(@address) %> </button>
+
+<button class="btn btn-danger">  <%= link_to 'Delete Address', @address,  method: :delete %> </button>
